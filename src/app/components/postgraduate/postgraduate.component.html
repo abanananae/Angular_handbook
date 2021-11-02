@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor = "let course of courses | paginate: { itemsPerPage: 9, currentPage: p }">
+      <div class="image">
+        <img src="../assets/2transform.png" alt="">
+        <div class="details">
+          <h2>{{course.ID}}</h2>
+          <p>{{course.name}}</p >
+            <div class="more">
+              <a href={{course.URL}} class="read-more">Read more.. </a>
+              <div class="icon-links"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <pagination-controls class="mypagination" (pageChange)="p = $event"previousLabel="Last Page" nextLabel="Next Page"></pagination-controls>
+  </div>
+</div>

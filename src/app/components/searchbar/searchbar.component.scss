@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap");
+
+//entire searchbox
+.wrapper{
+    max-width: 60vh;
+    margin: 90px auto;
+    left:0;
+    right:0;
+    color:white;
+    z-index: 10;
+    position: absolute;
+}
+.form-label{
+    font-size: 2em;
+}
+//drop down list
+.wrapper .search-input{
+    width: 100%;
+}
+
+//search box only
+.search-input input{
+    height: 70px;
+    width: 100%;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+}
+
+//drop down list underneath searchbox
+.search-input .autocom-box{
+    /*padding: 10px 8px; */
+    height: 40vh;
+    height:35px;
+    overflow-x: hidden;
+    color: black;
+    width:100%;
+    opacity: 1;
+    pointer-events: auto;
+}
+.mat-button{
+    width:100%;
+    height: 100%;
+}
+
+.autocom-box {
+    max-height:600px;
+    margin-top: 2px;
+    overflow-y: scroll;
+    scrollbar-width:none;
+    background-color: rgb(244, 244, 244);
+    border-radius: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color:black;
+    box-shadow: 0 0 0.25rem #888888;
+}
+
+.autocom-box li{
+    border-radius: 2px solid red;
+    list-style: none;
+    color:black;
+    background-color: White;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    width: 100%;
+    height:75px;
+    cursor: default;
+}
+.autocom-box li > a {
+    text-decoration: none;
+    padding-top:15px;   
+    margin-left:2px;
+    margin-right:2px;
+}
+.autocom-box li > h3 {
+    text-decoration: none;
+    padding-top:30px;
+    padding-left: 20px;
+    font-weight:440;
+    font-size:14px;
+}

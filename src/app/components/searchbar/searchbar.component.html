@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="col-md-12">
+        <div class="wrapper">
+            <label for="exampleFormControlInput1" class="form-label" >Search</label>
+            <div class="search-input">
+                <input type="text" placeholder="Find course by name or code ..." (input)="getSearch($event)" class="form-control">
+           </div>
+        
+           <div class="autocom-box">
+                <div  class="outcomeA" *ngIf= "data.length == data.length"></div>
+
+                <div  class="outcomeB" *ngIf="data.length < 9 ">
+                    <li *ngFor="let result of data">
+                        <a button mat-button href="{{result.URL}}" style="text-align:left;line-height: 15px;">
+                            Course ID: {{result.ID}} | {{result.name}} <br><br>
+                            Availability: {{result.session}}
+                        </a>
+                </div>
+
+                <div class ="outcomeC" *ngIf="data.length >=0 && data.length < 9">
+                    <li>
+                        <h3 style="text-align:left;line-height: 15px;">No other Matching Results</h3>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
